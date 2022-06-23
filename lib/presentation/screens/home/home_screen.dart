@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:imagineapps_leal/presentation/presentation.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -71,14 +72,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class _PopularSeriesSlide extends StatelessWidget {
+class _PopularSeriesSlide extends ConsumerWidget {
   const _PopularSeriesSlide({Key? key, required this.seriesName, required this.seriesRating}) : super(key: key);
 
   final String seriesName;
   final double seriesRating;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
 

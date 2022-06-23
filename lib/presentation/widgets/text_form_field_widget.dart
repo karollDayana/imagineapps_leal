@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
-  const TextFormFieldWidget({Key? key, required this.hintText, this.keyboardType, this.obscureText}) : super(key: key);
+  const TextFormFieldWidget({
+    Key? key,
+    required this.hintText,
+    this.keyboardType,
+    this.obscureText,
+    this.onChanged,
+  }) : super(key: key);
 
   final String hintText;
   final TextInputType? keyboardType;
   final bool? obscureText;
+  final void Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +30,7 @@ class TextFormFieldWidget extends StatelessWidget {
         focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: theme.colorScheme.primary, width: 1.5)),
       ),
       textAlignVertical: TextAlignVertical.center,
-      onChanged: (value) {},
+      onChanged: onChanged,
     );
   }
 }

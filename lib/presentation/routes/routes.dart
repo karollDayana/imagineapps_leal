@@ -7,6 +7,6 @@ Map<String, WidgetBuilder> getRoutesApp() {
     '/popularCarouselScreen': (_) => const PopularCarouselScreen(),
     '/recentEpisodesScreen': (_) => const RecentEpisodesScreen(),
     '/serieDetailScreen': (_) => const SerieDetailScreen(),
-    '/welcomeScreen': (_) => const WelcomeScreen(),
+    '/welcomeScreen': (_) => WelcomeScreen(),
   };
 }
